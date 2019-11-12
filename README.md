@@ -270,7 +270,11 @@ Rmpi::mpi.quit()
 
 If you have an improvement to this page such as a procedure to install a difficult package then please let us know. Please send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or sumbit a GitHub pull request.
 
-## Getting Help
+## Getting Help from Data & Statistical Services (DSS)
+
+For help on using R with data analysis please see the [DSS website](https://dss.princeton.edu). DSS offers online [tutorials](https://dss.princeton.edu/online_help/stats_packages/r/) and [training](https://dss.princeton.edu/training/) for performing data analysis with R as well as one-on-one appointments.
+
+## Getting Help from Research Computing
 
 If you encounter any difficulties while installing an R package on the HPC clusters then please
 send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or attend a <a href="https://researchcomputing.princeton.edu/education/help-sessions">help session</a>.
