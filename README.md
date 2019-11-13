@@ -175,7 +175,7 @@ If you built a package with the `gsl` or `gdal` modules loaded then you will nee
 
 ## Where to Run R Jobs
 
-The Tiger cluster is designed for large parallel jobs. In an effort to dissaude users from running small jobs on Tiger, such as serial R jobs, the scheduler has been configured to penalize these submissions in such a way that the queue times are very long. Della is ideal for serial R jobs. If you only have an account on Tiger and you want to run several small R jobs then please write to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> to request an account on Della. Be sure to explain the situation.
+The Tiger cluster is designed for large parallel jobs. In an effort to dissaude users from running small jobs on Tiger, such as serial R jobs, the scheduler has been configured to penalize these submissions by causing long queue times. Della is ideal for serial R jobs. If you only have an account on Tiger and you want to run several small R jobs then please write to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> to request an account on Della. Be sure to explain the situation.
 
 ## Running RStudio on the HPC Clusters
 
