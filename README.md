@@ -23,7 +23,7 @@ $ g++ --version
 g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39)
 ```
 
-While most R packages will compile with the current long-term version of GCC, some require a newer version. A newer version can be loaded by loading one of the latest Red Hat Developer Toolset (rh/devtoolset) modules:
+While most R packages will compile with the current long-term version of GCC, some require a newer version. A newer version is made available by loading one of the latest Red Hat Developer Toolset (rh/devtoolset) modules:
 
 ```
 $ module load rh/devtoolset/7
