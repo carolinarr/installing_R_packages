@@ -179,7 +179,7 @@ The Tiger cluster is designed for large parallel jobs. In an effort to dissaude 
 
 ## Where to Store Your Files
 
-You should run your jobs out of `/scratch/gpfs/<NetID>` on the HPC clusters. These filesystems are very fast and provide vast amounts of storage. Do not run jobs out of tigress. The tigress filesystem is slow and should only be used for backing up the files you produce on the `/scratch/gpfs` filesystems. Your home directory on all clusters is small and disk access is slow. It should only be used for storing source code and executables.
+You should run your jobs out of `/scratch/gpfs/<NetID>` on the HPC clusters. These filesystems are very fast and provide vast amounts of storage. Do not run jobs out of `/tigress`. The `/tigress` filesystem is slow and should only be used for backing up the files you produce on the `/scratch/gpfs` filesystems. Your `/home` directory on all clusters is small and it should only be used for storing source code and executables.
 
 The commands below give you an idea of how to launch your first R job:
 
