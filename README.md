@@ -199,7 +199,7 @@ $ cp /scratch/gpfs/<NetID>/myjob /tigress/<NetID>
 
 Most users only do back-ups every week or so. While `/scratch/gpfs` is not backed-up, files are never removed.
 
-The diagram below gives an overview of the filesystems and their speed and capacity:
+The diagram below gives an overview of the filesystems:
 
 ![tigress](https://tigress-web.princeton.edu/~jdh4/hpc_princeton_filesystems.png)
 
