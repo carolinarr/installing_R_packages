@@ -168,7 +168,7 @@ The following Slurm script could be used to run a serial R job:
 #SBATCH --mail-type=all          # send email on start, end and fault
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
-Rscript data_analysis.R
+Rscript myscript.R
 ```
 
 If you built a package with the `gsl` or `gdal` modules loaded then you will need to add `module load gsl` or `module load gdal`, respectively, before the `srun` command in the script above.
@@ -179,9 +179,29 @@ The Tiger cluster is designed for large parallel jobs. In an effort to dissaude 
 
 ## Where to Store Your Files
 
-![tigress](https://tigress-web.princeton.edu/~jdh4/hpc_princeton_filesystems.png)
+You should run your jobs out of `/scratch/gpfs/<NetID>` on the HPC clusters. These filesystems are very fast and provide vast amounts of storage. Do not run jobs out of tigress. The tigress filesystem is slow and should only be used for backing up the files you produce on the `/scratch/gpfs` filesystems. Your home directory on all clusters is small and disk access is slow. It should only be used for storing source code and executables.
 
-**IMPORTANT**: *You should run your jobs out of /scratch/network on Adroit and /scratch/gpfs on the other clusters. These filesystems are very fast and provide vast amounts of storage. Do not run jobs out of tigress. The tigress filesystem is slow and should only be used for backing up the files you produce on the /scratch/gpfs or /scratch/network filesystems. Your home directory on all clusters is small and disk access is slow. It should only be used for storing source code and executables*.
+The commands below give you an idea of how to launch your first R job:
+
+```
+$ ssh <NetID>@della.princeton.edu
+$ cd /scratch/gpfs/<NetID>
+$ mkdir myjob && cd myjob
+# put Slurm script and R script in myjob
+$ sbatch job.slurm
+```
+
+If the run produces data that you want to back-up then copy or move it to `/tigress`:
+
+```
+$ cp /scratch/gpfs/<NetID>/myjob /tigress/<NetID>
+```
+
+Most users only do back-ups every week or so. While `/scratch/gpfs` is not backed-up, files are never removed.
+
+The diagram below gives an overview of the filesystems and their speed and capacity:
+
+![tigress](https://tigress-web.princeton.edu/~jdh4/hpc_princeton_filesystems.png)
 
 ## Running RStudio on the HPC Clusters
 
