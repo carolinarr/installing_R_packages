@@ -163,7 +163,7 @@ The following Slurm script could be used to run a serial R job:
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
-#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G per cpu-core is default)
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=all          # send email on start, end and fault
 #SBATCH --mail-user=<YourNetID>@princeton.edu
@@ -181,17 +181,17 @@ The Tiger cluster is designed for large parallel jobs. In an effort to dissaude 
 
 You should run your jobs out of `/scratch/gpfs/<NetID>` on the HPC clusters. These filesystems are very fast and provide vast amounts of storage. Do not run jobs out of `/tigress`. That is, you should never be writing the output of actively running jobs to `/tigress`. The `/tigress` filesystem is slow and it should only be used for backing up the files that you produce on `/scratch/gpfs`. Your `/home` directory on all clusters is small and it should only be used for storing source code and executables.
 
-The commands below give you an idea of how to launch your first R job:
+The commands below give you an idea of how to properly run an R job:
 
 ```
 $ ssh <NetID>@della.princeton.edu
 $ cd /scratch/gpfs/<NetID>
 $ mkdir myjob && cd myjob
-# put Slurm script and R script in myjob
+# put R script and Slurm script in myjob
 $ sbatch job.slurm
 ```
 
-If the run produces data that you want to back-up then copy or move it to `/tigress`:
+If the run produces data that you want to backup then copy or move it to `/tigress`:
 
 ```
 $ cp -r /scratch/gpfs/<NetID>/myjob /tigress/<NetID>
