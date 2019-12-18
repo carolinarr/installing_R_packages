@@ -194,7 +194,7 @@ $ sbatch job.slurm
 If the run produces data that you want to back-up then copy or move it to `/tigress`:
 
 ```
-$ cp /scratch/gpfs/<NetID>/myjob /tigress/<NetID>
+$ cp -r /scratch/gpfs/<NetID>/myjob /tigress/<NetID>
 ```
 
 Most users only do back-ups every week or so. While `/scratch/gpfs` is not backed-up, files are never removed.
