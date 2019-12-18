@@ -197,7 +197,7 @@ If the run produces data that you want to back-up then copy or move it to `/tigr
 $ cp -r /scratch/gpfs/<NetID>/myjob /tigress/<NetID>
 ```
 
-Most users only do back-ups every week or so. While `/scratch/gpfs` is not backed-up, files are never removed. Important results should be transferred to `/tigress`.
+For large transfers consider using `rsync` instead of `cp`. Most users only do back-ups to `/tigress` every week or so. While `/scratch/gpfs` is not backed-up, files are never removed. However, important results should be transferred to `/tigress`.
 
 The diagram below gives an overview of the filesystems:
 
