@@ -179,7 +179,7 @@ The Tiger cluster is designed for large parallel jobs. In an effort to dissaude 
 
 ## Where to Store Your Files
 
-You should run your jobs out of `/scratch/gpfs/<NetID>` on the HPC clusters. These filesystems are very fast and provide vast amounts of storage. Do not run jobs out of `/tigress`. You should never be writing the output of actively running jobs to `/tigress`. The `/tigress` filesystem is slow and should only be used for backing up the files you produce on the `/scratch/gpfs` filesystems. Your `/home` directory on all clusters is small and it should only be used for storing source code and executables.
+You should run your jobs out of `/scratch/gpfs/<NetID>` on the HPC clusters. These filesystems are very fast and provide vast amounts of storage. Do not run jobs out of `/tigress`. That is, you should never be writing the output of actively running jobs to `/tigress`. The `/tigress` filesystem is slow and it should only be used for backing up the files that you produce on `/scratch/gpfs`. Your `/home` directory on all clusters is small and it should only be used for storing source code and executables.
 
 The commands below give you an idea of how to launch your first R job:
 
@@ -197,7 +197,7 @@ If the run produces data that you want to back-up then copy or move it to `/tigr
 $ cp -r /scratch/gpfs/<NetID>/myjob /tigress/<NetID>
 ```
 
-Most users only do back-ups every week or so. While `/scratch/gpfs` is not backed-up, files are never removed.
+Most users only do back-ups every week or so. While `/scratch/gpfs` is not backed-up, files are never removed. Important results should be transferred to `/tigress`.
 
 The diagram below gives an overview of the filesystems:
 
