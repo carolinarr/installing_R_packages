@@ -209,6 +209,32 @@ RStudio is available through two web portals. If you have an account on Adroit o
 
 While most packages can be installed through RStudio, at times you will need to ssh to Adroit or Della and follow the Quick Fix directions at the top of this page to install certain packages. Or instead of ssh, one can get to the head node by clicking on "Clusters" and then "&lt;Name&gt; Cluster Shell Access" in the OnDemand menu.
 
+For example, to install the `sf` package do the following:
+
+From the MyAdroit OnDemand menu choose  "Clusters" and then "Adroit Cluster Shell Access". Then run these commands:
+
+$ module load rh/devtoolset/7
+$ module load gdal
+$ R
+> install.packages("sf")
+> q()
+
+Then start RStudio server and in the "console" tab do:
+
+```
+> dyn.load("/usr/local/gdal/2.2.4/lib64/libgdal.so.20.3.3")
+> library("sf")
+```
+
+Or from the "terminal" tab do:
+
+```
+> module load gdal
+> library("sf")
+```
+
+If the package you are installing does not depend on GDAL then you do not need to load that library or module.
+
 ## Optimizing Performance
 
 The performance of numerically intensive packages such as `rstan` can be improved through compiler optimizations and vectorization. If you are an advanced user, before installing such a package, you may considering turning on these optimizations by creating a `~/.R/Makevars` file containing these lines:
