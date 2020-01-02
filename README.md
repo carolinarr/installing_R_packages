@@ -226,7 +226,7 @@ Then start RStudio server and in the "console" tab do:
 > library("sf")
 ```
 
-Or from the "terminal" tab do:
+Or from the "terminal" tab in RStudio do:
 
 ```
 > module load gdal
