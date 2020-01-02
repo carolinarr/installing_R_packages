@@ -219,21 +219,21 @@ $ R
 > q()
 ```
 
-Then start RStudio server and in the "console" tab do:
+Then start RStudio server from the "Interactive Apps" menu and in the "Console" tab do:
 
 ```
 > dyn.load("/usr/local/gdal/2.2.4/lib64/libgdal.so.20.3.3")
 > library("sf")
 ```
 
-Or from the "terminal" tab in RStudio do:
+Or from the "Terminal" tab in RStudio do:
 
 ```
 > module load gdal
 > library("sf")
 ```
 
-If the package you are installing does not depend on GDAL then you do not need to load that library or module.
+Note that graphics cannot be displayed in the "Terminal" tab. If the package you are installing does not depend on GDAL then you do not need to load that library or module.
 
 ## Optimizing Performance
 
