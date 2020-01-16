@@ -209,6 +209,8 @@ RStudio is available through two web portals. If you have an account on Adroit o
 
 ![rstudio](https://tigress-web.princeton.edu/~jdh4/rstudio_ondemand.png)
 
+![rstudio_interactive](https://tigress-web.princeton.edu/~jdh4/rstudio_interactive.png)
+
 While most packages can be installed through RStudio, at times you will need to ssh to Adroit or Della and follow the Quick Fix directions at the top of this page to install certain packages. Or instead of ssh, one can get to the head node by clicking on "Clusters" and then "&lt;Name&gt; Cluster Shell Access" in the OnDemand menu.
 
 For example, to install the `sf` package on Adroit, choose  "Clusters" and then "Adroit Cluster Shell Access". Then run these commands:
