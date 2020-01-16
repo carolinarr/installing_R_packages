@@ -5,7 +5,7 @@
 If you encounter difficulties while trying to install a common R package then try this:
 
 ```
-$ module load rh/devtoolset/7
+$ module load rh/devtoolset/8
 $ R
 > install.packages("<package-name>")
 ```
@@ -26,9 +26,9 @@ g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39)
 While most R packages will compile with the current long-term version of GCC, some require a newer version. A newer version is made available by loading one of the latest Red Hat Developer Toolset (rh/devtoolset) modules:
 
 ```
-$ module load rh/devtoolset/7
+$ module load rh/devtoolset/8
 $ g++ --version
-g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
+g++ (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
 ```
 
 After loading the `rh` module, start R and run `install.packages()` as shown above in the Quick Fix. Note that the C and Fortran compilers and related tools are also updated by this method which is important for some R packages.
@@ -69,10 +69,10 @@ Below is a full example session on Della:
 
 ```
 $ ssh <YourNetID>@della.princeton.edu
-$ module load rh/devtoolset/7
+$ module load rh/devtoolset/8
 $ R
 
-R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+R version 3.6.2 (2019-12-12) -- "Dark and Stormy Night"
 Copyright (C) 2019 The R Foundation for Statistical Computing
 Platform: x86_64-redhat-linux-gnu (64-bit)
 ...
@@ -136,7 +136,7 @@ After your first session, you will only be asked to select the CRAN mirror when 
 In addition to the `rh` module, some R packages require a newer version of the GNU Scientific Library (GSL). This can be accomplished with:
 
 ```
-$ module load rh/devtoolset/7
+$ module load rh/devtoolset/8
 $ module load gsl
 $ R
 > install.packages("<package-name>")
@@ -145,7 +145,7 @@ $ R
 Another common module to load is `gdal`. This is required for installing `rgdal`, for instance:
 
 ```
-$ module load rh/devtoolset/7
+$ module load rh/devtoolset/8
 $ module load gdal
 $ R
 > install.packages("<package-name>")
@@ -216,7 +216,7 @@ While most packages can be installed through RStudio, at times you will need to 
 For example, to install the `sf` package on Adroit, choose  "Clusters" and then "Adroit Cluster Shell Access". Then run these commands:
 
 ```
-$ module load rh/devtoolset/7
+$ module load rh/devtoolset/8
 $ module load gdal
 $ R
 > install.packages("sf")
@@ -281,7 +281,7 @@ Rmpi::mpi.quit()
 
 1. I tried to install an R package but the installation failed with this error message: `'for' loop initial declarations are only allowed in C99 mode`. What should I do?
 
-   This problem can be solved by loading a newer version of GCC. To do this, before starting R, run this command on the command line: `module load rh/devtoolset/7`. Read the content above for the explanation for this solution.
+   This problem can be solved by loading a newer version of GCC. To do this, before starting R, run this command on the command line: `module load rh/devtoolset/8`. Read the content above for the explanation for this solution.
 
 2. Nothing is working properly and I want to delete all my R packages and start over. How do I do this?
 
