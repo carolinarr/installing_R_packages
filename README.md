@@ -205,7 +205,7 @@ The diagram below gives an overview of the filesystems:
 
 ## Running RStudio on the HPC Clusters
 
-RStudio is available through two web portals. If you have an account on Adroit or Della then browse to [https://myadroit.princeton.edu](https://myadroit.princeton.edu) or [https://mydella.princeton.edu](https://mydella.princeton.edu). To begin a session, click on "Interactive Apps" and then "RStudio Server".
+RStudio is available through Open OnDemand web portals. If you have an account on Adroit or Della then browse to [https://myadroit.princeton.edu](https://myadroit.princeton.edu) or [https://mydella.princeton.edu](https://mydella.princeton.edu). To begin a session, click on "Interactive Apps" and then "RStudio Server".
 
 ![rstudio](https://tigress-web.princeton.edu/~jdh4/two_frames.png)
 
