@@ -318,6 +318,14 @@ Rmpi::mpi.quit()
    Or one could set an R environment variable in `~/.bashrc`:
 
    `export R_LIBS=~/.local/lib:$R_LIBS`
+   
+9. If you receive the error "window not viewable" when trying to install a package and being asked to select a CRAN mirror, try unsetting the DISPLAY before starting R:
+
+    `unset DISPLAY`
+
+    `module load rh/devtoolset/8`
+
+    `R`
 
 
 ## How to Contribute
